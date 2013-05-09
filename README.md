@@ -3,8 +3,7 @@ DMTN
 
 Simple but useful desktop widget
 ===
-- Mouth closed: Ready for upload
-- Mouth opened: Uploading something
+
 Examples how to use:
 1.
 	1. Take a printscreen
