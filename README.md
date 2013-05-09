@@ -1,3 +1,5 @@
+<img src="http://i.imgur.com/p94mhrG.jpg"/>
+
 DMTN
 ====
 Simple but useful desktop widget.
