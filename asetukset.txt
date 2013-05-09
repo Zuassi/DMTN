@@ -1,0 +1,6 @@
+﻿widgetY:30
+widgetX:1940
+weatherlocation:hämeenlinna
+font:Segoe Script
+fontsize:100
+fontcolor:255,255,255,150
