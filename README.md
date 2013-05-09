@@ -5,6 +5,7 @@ Simple but useful desktop widget
 ===
 
 Examples how to use:
+------
 1.
 	1. Take a printscreen
 	2. Click the guy
