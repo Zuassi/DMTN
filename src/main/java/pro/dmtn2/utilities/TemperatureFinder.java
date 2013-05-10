@@ -45,9 +45,9 @@ public class TemperatureFinder extends Thread {
     public void run() {
         while (true) {
             try {
-                System.out.println("vaihto");
+               
                 gui.changeText(findTemperature(location));
-                System.out.println("change");
+              
                 try {
                     this.sleep(300000);
                 } catch (InterruptedException ex) {

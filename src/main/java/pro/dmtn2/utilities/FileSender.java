@@ -44,19 +44,25 @@ public class FileSender extends SwingWorker {
     private List<File> fileList;
     private boolean isText = false;
     private boolean oldFiles = false;
+    private boolean prtscr = false;
 
     public FileSender(GUI gui) {
         this.GUI = gui;
     }
 
     private void linkkiLeikepoydalle(String nimi) throws IOException {
+         String linkki;
+        if (prtscr) {
+           linkki = "http://www.neekeri.com/prtscr/" + nimi;
+        } else {
+            linkki = "http://www.neekeri.com/up/" + nimi;
+        }
 
-        String linkki = "http://www.neekeri.com/up/" + nimi;
         Clipboard clbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection strsel = new StringSelection(linkki);
         clbrd.setContents(strsel, strsel);
         GUI.closeMouth();
-        
+
 
     }
 
@@ -84,7 +90,7 @@ public class FileSender extends SwingWorker {
 
     private void sendFiles(Transferable tran) throws UnsupportedFlavorException, IOException {
         if (fileList == null) {     // If files are drag&dropped filelist will be filled at DragAndDropListener
-
+            prtscr = true;
             if (tran.isDataFlavorSupported(DataFlavor.javaFileListFlavor)) {
                 fileList = (List<File>) tran.getTransferData(DataFlavor.javaFileListFlavor);
             } else {
@@ -123,6 +129,8 @@ public class FileSender extends SwingWorker {
         } catch (IOException ex) {
             Logger.getLogger(FileSender.class.getName()).log(Level.SEVERE, null, ex);
         }
+        prtscr = false;
+        isText = false;
         fileList = null;
     }
 
