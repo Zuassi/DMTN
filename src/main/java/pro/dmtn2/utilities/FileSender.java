@@ -56,6 +56,7 @@ public class FileSender extends SwingWorker {
         StringSelection strsel = new StringSelection(linkki);
         clbrd.setContents(strsel, strsel);
         GUI.closeMouth();
+        
 
     }
 
@@ -105,7 +106,7 @@ public class FileSender extends SwingWorker {
                 MultipartEntity reqEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
                 FileBody bin = new FileBody(file);
                 reqEntity.addPart("Filename", new StringBody(file.getName()));
-                reqEntity.addPart("folder", new StringBody("/up"));
+                reqEntity.addPart("fo8lder", new StringBody("/up"));
                 reqEntity.addPart("fileext", new StringBody("*.php;*.pdf;*.fla;*.dat;*.ass;*.jar;*.java;*.csv;*.bmp;*.jpg;*.jpeg;*.png;*.gif;*.swf;*.svg;*.txt;*.exe;*.wmv;*.avi;*.mp3;*.nfo;*.mpg;*.naf;*.zip;*.rar;*.7z;*.tif;*.psd;*.doc;*.docx;*.ppt;*.pptx;*.flv;*.mp4;*.mid;*.aac;*.tar.bz2;*.tar.gz;*.tar;*.tif;*.yuv;*.svg;*.db;*.nfo;*.bat;*.sav;*.ttf;*.dll;*.sys;*.deb;*.pkg;*.gz;*.iso;*.toast;*.dmg;*.bak;*.tmp;*.msi;*.torrent;*.flac;*.ogg;*.JPG,*.PNG,*.JPEG;*.TCL;*.tcl"));
                 reqEntity.addPart("Filedata", bin);
                 reqEntity.addPart("Upload", new StringBody("Submit Query"));
@@ -122,6 +123,7 @@ public class FileSender extends SwingWorker {
         } catch (IOException ex) {
             Logger.getLogger(FileSender.class.getName()).log(Level.SEVERE, null, ex);
         }
+        fileList = null;
     }
 
     private void sendText() throws UnsupportedFlavorException, IOException {
