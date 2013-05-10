@@ -2,7 +2,7 @@
 
 DMTN
 ====
-Simple but useful desktop widget.
+Simple but useful java desktop widget.
 
 Download: http://www.neekeri.com/up/nigloader.rar
 
