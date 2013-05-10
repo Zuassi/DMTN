@@ -1,5 +1,5 @@
 ﻿widgetY:30
-widgetX:1940
+widgetX:30
 weatherlocation:hämeenlinna
 font:Segoe Script
 fontsize:100
